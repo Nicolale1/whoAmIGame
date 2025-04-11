@@ -1,11 +1,11 @@
 import openai
 import random
-import caracters
+import character
 from key import secret_key #importing secrect_key from file
 
 client = openai.OpenAI(api_key=secret_key) #making a client
 
-def send_message(user_message):
+def send_message(user_message, character_string):
     response = client.chat.completions.create(
         model="gpt-4",  # eller "gpt-4"
         messages=[
